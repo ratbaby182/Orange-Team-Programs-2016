@@ -7,7 +7,7 @@ class AutonRed < Alicorn::Shard
 	end
 	
 	def update
-		
+		#get robot away from wall, pointd in riht direction
 		@sdk.set("left_servo", Alicorn::Vector.max)
 		@sdk.set("right_servo", Alicorn::Vector.max)
 		
@@ -27,13 +27,14 @@ class AutonRed < Alicorn::Shard
 		@sdk.set("right", Alicorn::Vector.zero)
 		sleep(100)
 		
-		while true
-			
+		while true #the good stuff
+			#go forward
 			@sdk.set("left", Alicorn::Vector.new(0.5))
 			@sdk.set("right", Alicorn::Vector.new(0.5).invert())
 			
+			#loooking for white
 			if @down_color >= 123 && @down_color <= 4646
-				
+				 #to the beacon
 				@sdk.set("left", Alicorn::Vector.zero)
 				@sdk.set("right", Alicorn::Vector.zero)
 				sleep(100)
@@ -46,6 +47,7 @@ class AutonRed < Alicorn::Shard
 				@sdk.set("right", Alicorn::Vector.zero)
 				sleep(100)
 				
+				#checking the beacon's current color and adjusting servos
 				if @left_color < 123
 					
 					@sdk.set("left_servo", Alicorn::Vector.zero)
@@ -60,6 +62,7 @@ class AutonRed < Alicorn::Shard
 					
 				end
 				
+				#push it real good
 				@sdk.set("left", Alicorn::Vector.new(0.5))
 				@sdk.set("right", Alicorn::Vector.new(0.5).invert())
 				sleep(100)
