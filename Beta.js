@@ -1,9 +1,5 @@
 var sdk, joy1;
 
-//comment
-//another flippin comment
-//testin this out.........
-
 alicorn.shard("Beta")
 
 	.create(function(self) {
