@@ -58,17 +58,17 @@ alicorn.shard("Beta")
 		//crossbow section
 
 		if (joy2.get("a") == true) {
-			sdk.set("crank", 0.125);
+			sdk.set("crank", 0.25);
 		} else if (joy2.get("b") == true) {
-			sdk.set("crank", -0.125);
+			sdk.set("crank", -0.25);
 		} else {
 			sdk.set("crank", 0);
 		}
 
 		if (joy2.get("x") == true) {
-			sdk.set("release", 0);
+			sdk.set("release", 1);
 		} else if (joy2.get("y") == true) {
-			sdk.set("release", -0.5);
+			sdk.set("release", 0);
 		}
 
 	})
