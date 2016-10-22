@@ -70,9 +70,9 @@ alicorn.shard("Beta")
 			sdk.set("crank", 0);
 		}
 
-		if (joy2.get("x") == true) {
+		if (joy2.get("y") == true) {
 			sdk.set("release", 0);
-		} else if (joy2.get("y") == true) {
+		} else if (joy2.get("x") == true) {
 			sdk.set("release", -1);
 		}
 
