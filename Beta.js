@@ -23,14 +23,15 @@ alicorn.shard("Beta")
 
 		//drive section
 
-		var xoneboy = joy1.get("x1");
-		var yoneboy = joy1.get("y1");
+		var leftvariable = joy1.get("y1") / 2;
+		var rightvariable = joy1.get("y2") / 2;
 
-		var leftvariable = (xoneboy + yoneboy) / 2;
-		var rightvariable = (xoneboy - yoneboy) / 2;
-
-		sdk.set("left", leftvariable);
-		sdk.set("right", rightvariable);
+		if (joy1.get("y1") > 0.1 || joy1.get("y1") < -0.1) {
+			sdk.set("left", leftvariable);
+		}
+		if (joy1.get("y2") > 0.1 || joy1.get("y2") < -0.1) {
+			sdk.set("right", rightvariable);
+		}
 
 		//button pushers
 
@@ -47,12 +48,11 @@ alicorn.shard("Beta")
 		}
 
 		//ball pusher servo
-		//don't use this yet it's clamped in the closed position
 
 		if (joy1.get("left_bumper") == true) {
-			sdk.set("pusher", 0);
-		} else if (joy1.get("right_bumper")) {
 			sdk.set("pusher", -1);
+		} else if (joy1.get("right_bumper")) {
+			sdk.set("pusher", 0);
 		}
 
 		//crossbow section
@@ -66,9 +66,9 @@ alicorn.shard("Beta")
 		}
 
 		if (joy2.get("x") == true) {
-			sdk.set("release", 1);
-		} else if (joy2.get("y") == true) {
 			sdk.set("release", 0);
+		} else if (joy2.get("y") == true) {
+			sdk.set("release", -1);
 		}
 
 	})
