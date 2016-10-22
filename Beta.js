@@ -24,13 +24,18 @@ alicorn.shard("Beta")
 		//drive section
 
 		var leftvariable = joy1.get("y1") / 2;
-		var rightvariable = joy1.get("y2") / 2;
+		var rightvariable = joy1.get("y2") / -2;
 
 		if (joy1.get("y1") > 0.1 || joy1.get("y1") < -0.1) {
 			sdk.set("left", leftvariable);
+		} else {
+			sdk.set("left", 0);
 		}
+
 		if (joy1.get("y2") > 0.1 || joy1.get("y2") < -0.1) {
 			sdk.set("right", rightvariable);
+		} else {
+			sdk.set("right", 0);
 		}
 
 		//button pushers
