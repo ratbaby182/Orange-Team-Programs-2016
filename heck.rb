@@ -2,7 +2,7 @@ class Heck < Alicorn::Shard
     @speed_boost = false
 
     def create
-        @sdk = getSphere("AndroidFTC")
+        @sdk = getShard("AndroidFTC")
         @joy1 = @sdk.get("gamepad_1")
         @joy2 = @sdk.get("gamepad_2")
     end

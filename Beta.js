@@ -23,8 +23,8 @@ alicorn.shard("Beta")
 
 		//drive section
 
-		var leftvariable = joy1.get("y1") / 2;
-		var rightvariable = joy1.get("y2") / -2;
+		var leftvariable = joy1.get("y1") * 0.6;
+		var rightvariable = joy1.get("y2") * -0.6;
 
 		if (joy1.get("y1") > 0.1 || joy1.get("y1") < -0.1) {
 			sdk.set("left", leftvariable);
