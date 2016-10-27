@@ -1,6 +1,6 @@
 var sdk, joy1;
 
-alicorn.shard("Beta")
+alicorn.shard("Alpha")
 
 	.create(function(self) {
 
@@ -23,17 +23,19 @@ alicorn.shard("Beta")
 
 		//drive section
 
-		var leftvariable = joy1.get("y1") * 0.6;
-		var rightvariable = joy1.get("y2") * -0.6;
-
-		if (joy1.get("y1") > 0.1 || joy1.get("y1") < -0.1) {
-			sdk.set("left", leftvariable);
-		} else {
+		if (joy1.get("y1") > 0.1) {
+			sdk.set("left", 0.6);
+		} else if (joy1.get("y1") < -0.1) {
+			sdk.set("left", -0.6);
+		}
+		}else {
 			sdk.set("left", 0);
 		}
 
-		if (joy1.get("y2") > 0.1 || joy1.get("y2") < -0.1) {
-			sdk.set("right", rightvariable);
+		if (joy1.get("y2") > 0.1) {
+			sdk.set("right", -0.6);
+		} else if (joy1.get("y2") < -0.1) {
+			sdk.set("right", 0.6);
 		} else {
 			sdk.set("right", 0);
 		}
