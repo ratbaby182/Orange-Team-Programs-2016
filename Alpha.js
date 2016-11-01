@@ -24,18 +24,17 @@ alicorn.shard("Alpha")
 		//drive section
 
 		if (joy1.get("y1") > 0.1) {
-			sdk.set("left", 0.6);
+			sdk.set("left", 0.55);
 		} else if (joy1.get("y1") < -0.1) {
-			sdk.set("left", -0.6);
-		}
-		}else {
+			sdk.set("left", -0.55);
+		} else {
 			sdk.set("left", 0);
 		}
 
 		if (joy1.get("y2") > 0.1) {
-			sdk.set("right", -0.6);
+			sdk.set("right", -0.55);
 		} else if (joy1.get("y2") < -0.1) {
-			sdk.set("right", 0.6);
+			sdk.set("right", 0.55);
 		} else {
 			sdk.set("right", 0);
 		}
@@ -45,7 +44,7 @@ alicorn.shard("Alpha")
 		if (joy1.get("a") == true) {
 			sdk.set("left_servo", 0.2);
 		} else if (joy1.get("b") == true) {
-			sdk.set("left_servo", -1)
+			sdk.set("left_servo", -1);
 		}
 
 		if (joy1.get("x") == true) {
