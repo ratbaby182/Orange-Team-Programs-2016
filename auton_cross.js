@@ -1,4 +1,4 @@
-alicorn.shard("auto_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
+alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
 
 	function sleep(milliseconds) {
   	var start = new Date().getTime();
