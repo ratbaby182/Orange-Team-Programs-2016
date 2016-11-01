@@ -81,5 +81,5 @@ alicorn.shard("Alpha")
 	})
 
 	.destroy(function(self) {
-		//whaddup
+		//oh shit Continuity whaddup
 	});
