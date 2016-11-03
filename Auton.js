@@ -12,15 +12,10 @@ alicorn.shard("Auton")
 
 	.update(function(self) {
 
-	sdk.set("left", -1);
-  sdk.set("right", 1);
-	self.sleep(2000);
-
 	while(true) {
-
-  	sdk.set("left", 0);
-  	sdk.set("right", 0);
-
+	sdk.set("left", .25)
+	sdk.set("right", -.25)
+  	
 	}
 
 	})
