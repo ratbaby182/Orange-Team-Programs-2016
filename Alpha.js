@@ -10,7 +10,7 @@ alicorn.shard("Alpha")
 
 		var leftup = true;
 		var rightup = true;
-		var pushout == false;
+		var pushout = false;
 
 		//left - controls the left treads
 		//right - controls the right treads
@@ -93,5 +93,5 @@ alicorn.shard("Alpha")
 	})
 
 	.destroy(function(self) {
-		//oh shit Continuity whaddup
+		//oh sh*t Continuity whaddup
 	});
