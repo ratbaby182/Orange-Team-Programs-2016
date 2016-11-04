@@ -1,6 +1,5 @@
-alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
-
-	function sleep(milliseconds) {
+var sdk;
+function sleep(milliseconds) {
   	var start = new Date().getTime();
   	for (var i = 0; i < 1e7; i++) {
     	if ((new Date().getTime() - start) > milliseconds){
@@ -8,13 +7,12 @@ alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex i
     	}
   	}
 	}
+alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
 
-	.create(function(self) {
-
-		var sdk = self.require("AndroidFTC");
-
+  .create(function(self) {
+		sdk = self.require("AndroidFTC");
+	
 	})
-
 	.update(function(self) {
 
 		sdk.set("cross", -.25)
@@ -23,9 +21,9 @@ alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex i
 		
 		//fire
 		sdk.set("release", -1) 
-		
+	})
+
+	
 	.destroy(function(self) {
 
-		//whaddup
-
-	});
+});
