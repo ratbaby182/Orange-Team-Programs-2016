@@ -8,10 +8,6 @@ alicorn.shard("Alpha")
 		joy1 = sdk.get("gamepad_1");
 		joy2 = sdk.get("gamepad_2");
 
-		var leftup = true;
-		var rightup = true;
-		var pushout = false;
-
 		//left - controls the left treads
 		//right - controls the right treads
 		//crank - the motor that primes the crossbow
@@ -48,30 +44,24 @@ alicorn.shard("Alpha")
 
 		//button pushers
 
-		if (joy1.get("a") == true && leftup == true) {
+		if (joy1.get("a") == true) {
 			sdk.set("left_servo", 0.2);
-			var leftup = false;
-		} else if (joy1.get("a") == true && leftup == false) {
+		} else if (joy1.get("b") == true) {
 			sdk.set("left_servo", -1);
-			var leftup = true;
 		}
 
-		if (joy1.get("b") == true && rightup == true) {
+		if (joy1.get("x") == true) {
 			sdk.set("right_servo", 0.2);
-			var rightup = false;
-		} else if (joy1.get("b") == true && rightup == false) {
+		} else if (joy1.get("y") == true) {
 			sdk.set("right_servo", -1);
-			var rightup = true;
 		}
 
 		//ball pusher servo
 
-		if (joy1.get("left_bumper") == true && pushout == true) {
+		if (joy1.get("left_bumper") == true) {
 			sdk.set("pusher", -1);
-			var pushout = false;
-		} else if (joy1.get("left_bumper") == true && pushout == false) {
+		} else if (joy1.get("right_bumper") == true) {
 			sdk.set("pusher", 0);
-			var pushout = true;
 		}
 
 		//crossbow section
