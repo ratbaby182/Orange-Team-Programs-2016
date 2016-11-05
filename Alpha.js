@@ -1,4 +1,4 @@
-var sdk, joy1;
+var sdk, joy1, joy2;
 
 alicorn.shard("Alpha")
 
