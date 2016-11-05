@@ -9,7 +9,7 @@ function sleep(milliseconds) {
   }
 }
 
-alicorn.shard("auton_blue_final")
+alicorn.shard("auton_red_final")
 
   .create(function(self) {
 
@@ -40,11 +40,11 @@ alicorn.shard("auton_blue_final")
     //to the middle bit
   	sdk.set("left", -.5);
   	sdk.set("right", .5);
-    sleep(1500)
+    sleep(1500);
 
   	//turn
-  	sdk.set("left", 0.5);
-  	sdk.set("right", 0.5);
+  	sdk.set("left", -0.5);
+  	sdk.set("right", -0.5);
   	sleep(300);
 
   	//hit the ball
