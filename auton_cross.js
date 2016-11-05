@@ -12,25 +12,31 @@ function sleep(milliseconds) {
 alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
 
   .create(function(self) {
+
 		sdk = self.require("AndroidFTC");
+    
 	})
 
 	.update(function(self) {
 
     sdk.set("crank", .25);
-    sleep(4000);
-    sdk.set("release", 0);
+    sleep(2000);
+    sdk.set("crank", 0);
+    sleep(1000);
+    sdk.set("release", -1);
     sleep(1000);
 		sdk.set("crank", -.25);
-		sleep(4000);  //idk how long it will take for the crossbow to get all the way back so 4 sec for now
+		sleep(2000);
 		sdk.set("crank", 0);
     sleep(1000);
-
-		//fire
-		sdk.set("release", -1);
+    sdk.set("release", 0);
+    sleep(1000);
 
 	})
 
 	.destroy(function(self) {
+
+    sdk.set("crank", 0);
+    sdk.set("release", 0);
 
   });
