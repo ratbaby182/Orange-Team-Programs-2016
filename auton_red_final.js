@@ -40,21 +40,11 @@ alicorn.shard("auton_red_final")
     //to the middle bit
   	sdk.set("left", -.5);
   	sdk.set("right", .5);
-    sleep(1500);
-
-  	//turn
-  	sdk.set("left", -0.5);
-  	sdk.set("right", -0.5);
-  	sleep(300);
-
-  	//hit the ball
-  	sdk.set("left", -.5);
-  	sdk.set("right", .5);
-    sleep(1000);
+    sleep(2000);
 
   	sdk.set("left", 0);
   	sdk.set("right", 0);
-    sleep(20200);
+    sleep(20000);
 
   })
 
