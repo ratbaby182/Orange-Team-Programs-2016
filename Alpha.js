@@ -10,7 +10,7 @@ alicorn.shard("Alpha")
 
 		//left - controls the left treads
 		//right - controls the right treads
-		//crank - the motor that primes the crossbow
+		//crank that (soulja boy) - the motor that primes the crossbow
 
 		//left_servo - the left button pusher
 		//right_servo - the right button pusher

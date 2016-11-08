@@ -8,7 +8,6 @@ function sleep(milliseconds) {
     }
   }
 }
-
 alicorn.shard("auton_cross")//for firing the crossbow during auton whie vortex is straght ahead of bot
 
   .create(function(self) {
