@@ -52,9 +52,15 @@ alicorn.shard("auton_blue_final")
   	sdk.set("right", .5);
     sleep(1000);
 
+		//turn some more to try to move the ball
+		sdk.set("left", 0.5)
+		sdk.set("right", 0.5)
+		sleep(1000)
+		
+		//stahp
   	sdk.set("left", 0);
   	sdk.set("right", 0);
-    sleep(20200);
+    sleep(30000);
 
   })
 
