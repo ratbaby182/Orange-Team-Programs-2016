@@ -10,11 +10,7 @@ alicorn.shard("Alpha")
 
 		//left - controls the left treads
 		//right - controls the right treads
-		//crank that (soulja boy) - the motor that primes the crossbow
-
-		//left_servo - the left button pusher
-		//right_servo - the right button pusher
-		//pusher - pushes the ball out of the plow
+		//crank - the motor that primes the crossbow
 		//release - the servo on the crossbow
 
 	})
@@ -42,41 +38,19 @@ alicorn.shard("Alpha")
 			sdk.set("right", 0);
 		}
 
-		//button pushers
-
-		if (joy1.get("a") == true) {
-			sdk.set("left_servo", 0.2);
-		} else if (joy1.get("b") == true) {
-			sdk.set("left_servo", -1);
-		}
-
-		if (joy1.get("x") == true) {
-			sdk.set("right_servo", 0.2);
-		} else if (joy1.get("y") == true) {
-			sdk.set("right_servo", -1);
-		}
-
-		//ball pusher servo
-
-		if (joy1.get("left_bumper") == true) {
-			sdk.set("pusher", -1);
-		} else if (joy1.get("right_bumper") == true) {
-			sdk.set("pusher", 0);
-		}
-
 		//crossbow section
 
-		if (joy2.get("a") == true) {
+		if (joy1.get("a") == true) {
 			sdk.set("crank", 0.25);
-		} else if (joy2.get("b") == true) {
+		} else if (joy1.get("b") == true) {
 			sdk.set("crank", -0.25);
 		} else {
 			sdk.set("crank", 0);
 		}
 
-		if (joy2.get("y") == true) {
+		if (joy1.get("y") == true) {
 			sdk.set("release", 0);
-		} else if (joy2.get("x") == true) {
+		} else if (joy1.get("x") == true) {
 			sdk.set("release", -1);
 		}
 
