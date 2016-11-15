@@ -33,10 +33,17 @@ alicorn.shard("auton_fates")
   	sdk.set("right", .5);
     sleep(3000);
 
+		//roobt does a little turn to try to dislodge the ball
+		sdk.set("left", -.5);
+		sdk.set("right", -.5);
+		sleep(1000);
+		
+		//robot stops and waits
   	sdk.set("left", 0);
   	sdk.set("right", 0);
     sleep(25000);
-
+		
+	
   })
 
   .destroy(function(self) {
