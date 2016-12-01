@@ -40,6 +40,7 @@ alicorn.shard("Alpha")
 
 		//crossbow section
 
+		//wind the crank
 		if (joy1.get("a") == true) {
 			sdk.set("crank", 0.25);
 		} else if (joy1.get("b") == true) {
@@ -48,10 +49,18 @@ alicorn.shard("Alpha")
 			sdk.set("crank", 0);
 		}
 
+		//grab or release the elastic
 		if (joy1.get("y") == true) {
 			sdk.set("release", 0);
 		} else if (joy1.get("x") == true) {
 			sdk.set("release", -1);
+		}
+
+		//move the reload arm
+		if (joy1.get("left_bumper") == true) {
+			sdk.set("reload", 0);
+		} else if (joy1.get("right_bumper") == true) {
+			sdk.set("reload", -1);
 		}
 
 	})
