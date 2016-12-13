@@ -30,12 +30,12 @@ alicorn.shard("auton_shoot_twice")
 
       //get the crank in position
       sdk.set("crank", 0.25);
-      sleep(1000);
+      sleep(1750);
       sdk.set("crank", 0);
       sleep(100);
 
       //grab the elastic
-      sdk.set("release", 1);
+      sdk.set("release", -1);
       sleep(500);
 
       if(efgt == 1)
@@ -43,15 +43,20 @@ alicorn.shard("auton_shoot_twice")
         //reload the crossbow
         sdk.set("reload", 0);
         sleep(1000);
-        sdk.set("reload", 1);
-        sleep(1000);
       }
 
       //pull the elastic back
       sdk.set("crank", -0.25);
-      sleep(1000);
+      sleep(1750);
       sdk.set("crank", 0);
-      sleep(100);
+      sleep(1000);
+
+      if(efgt == 1)
+      {
+        //reload the crossbow
+        sdk.set("reload", -1);
+        sleep(1000);
+      }
 
       //release it
       sdk.set("release", 0);
@@ -61,5 +66,5 @@ alicorn.shard("auton_shoot_twice")
 
   .destroy(function(self)
   {
-    //peepo
+    efgt = 0;
   });
