@@ -40,13 +40,13 @@ alicorn.shard("auton_fates_twice")
 
       //pull the elastic back
       sdk.set("crank", -0.25);
-      sleep(1750);
+      sleep(1500);
       sdk.set("crank", 0);
-      sleep(100);
+      sleep(1500);
 
       if(hgtvc == 1) {
         //reload the crossbow
-        sdk.set("reload", 1);
+        sdk.set("reload", -1);
         sleep(1000);
       }
 
@@ -86,9 +86,14 @@ alicorn.shard("auton_fates_twice")
     	  sdk.set("right", 0);
         sleep(1000);
 
-        sdk.set("left", -.5);
-    	  sdk.set("right", .5);
-        sleep(500);
+        //sdk.set("left", -.5);
+    	  //sdk.set("right", .5);
+        //sleep(500);
+
+        //maybe change back later
+        sdk.set("left", -1);
+    	  sdk.set("right", 1);
+        sleep(250);
 
         sdk.set("left", 0);
         sdk.set("right", 0);
