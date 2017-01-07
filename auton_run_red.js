@@ -1,5 +1,5 @@
 var sdk;
-var qwerty = 0;
+var hgtvc = 0;
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -10,7 +10,7 @@ function sleep(milliseconds) {
   }
 }
 
-alicorn.shard("auton_fates")
+alicorn.shard("auton_run_red")
 
   .create(function(self) {
 
@@ -20,14 +20,7 @@ alicorn.shard("auton_fates")
 
   .update(function(self) {
 
-    if(qwerty == 0) {
-
-      //fire that crossbow whaddup
-      sleep(1000);
-      sdk.set("release", 0);
-      sleep(1000);
-
-      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    if(hgtvc == 0) {
 
       //what's up lets hit that ball
 
@@ -41,8 +34,8 @@ alicorn.shard("auton_fates")
       sleep(1000);
 
 		  //roobt does a little turn to try to dislodge the ball
-		  sdk.set("left", -.25);
-		  sdk.set("right", -.25);
+		  sdk.set("left", .25);
+		  sdk.set("right", .25);
 		  sleep(1000);
 
 		  //robot stops and waits
@@ -50,8 +43,8 @@ alicorn.shard("auton_fates")
   	  sdk.set("right", 0);
       sleep(1000);
 
-      sdk.set("left", .25);
-		  sdk.set("right", .25);
+      sdk.set("left", -.25);
+		  sdk.set("right", -.25);
 		  sleep(1000);
 
       sdk.set("left", 0);
@@ -65,21 +58,21 @@ alicorn.shard("auton_fates")
       sdk.set("left", 0);
       sdk.set("right", 0);
 
-      qwerty = 1;
+      hgtvc = 1;
     }
 
-    if(qwerty == 1) {
+    if(hgtvc == 1) {
       sdk.set("left", 0);
       sdk.set("right", 0);
       sdk.set("release", 0);
 
-      qwerty = 2;
+      hgtvc = 2;
     }
 
   })
 
   .destroy(function(self) {
 
-    qwerty = 0;
+    ghtvc = 0;
 
   });

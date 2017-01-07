@@ -1,5 +1,5 @@
 var sdk;
-var efgt = 0;
+var efgth = 0;
 
 function sleep(milliseconds)
 {
@@ -23,7 +23,7 @@ alicorn.shard("auton_shoot_twice")
 
   .update(function(self)
   {
-    if(efgt == 0 || efgt == 1)
+    if(efgth == 0 || efgth == 1)
     {
       //fire that crossbow whaddup
       //TWICE
@@ -38,7 +38,7 @@ alicorn.shard("auton_shoot_twice")
       sdk.set("release", -1);
       sleep(500);
 
-      if(efgt == 1)
+      if(efgth == 1)
       {
         //reload the crossbow
         sdk.set("reload", 0);
@@ -47,11 +47,11 @@ alicorn.shard("auton_shoot_twice")
 
       //pull the elastic back
       sdk.set("crank", -0.25);
-      sleep(1750);
+      sleep(1250);
       sdk.set("crank", 0);
       sleep(1000);
 
-      if(efgt == 1)
+      if(efgth == 1)
       {
         //reload the crossbow
         sdk.set("reload", -1);
@@ -60,11 +60,11 @@ alicorn.shard("auton_shoot_twice")
 
       //release it
       sdk.set("release", 0);
-      efgt += 1;
+      efgth += 1;
     }
   })
 
   .destroy(function(self)
   {
-    efgt = 0;
+    efgth = 0;
   });

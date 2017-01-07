@@ -1,5 +1,5 @@
 var sdk;
-var qwerty = 0;
+var abcd = 0;
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -10,7 +10,7 @@ function sleep(milliseconds) {
   }
 }
 
-alicorn.shard("auton_fates")
+alicorn.shard("auton_run")
 
   .create(function(self) {
 
@@ -20,14 +20,7 @@ alicorn.shard("auton_fates")
 
   .update(function(self) {
 
-    if(qwerty == 0) {
-
-      //fire that crossbow whaddup
-      sleep(1000);
-      sdk.set("release", 0);
-      sleep(1000);
-
-      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    if(abcd == 0) {
 
       //what's up lets hit that ball
 
@@ -65,21 +58,21 @@ alicorn.shard("auton_fates")
       sdk.set("left", 0);
       sdk.set("right", 0);
 
-      qwerty = 1;
+      abcd = 1;
     }
 
-    if(qwerty == 1) {
+    if(abcd == 1) {
       sdk.set("left", 0);
       sdk.set("right", 0);
       sdk.set("release", 0);
 
-      qwerty = 2;
+      abcd = 2;
     }
 
   })
 
   .destroy(function(self) {
 
-    qwerty = 0;
+    abcd = 0;
 
   });

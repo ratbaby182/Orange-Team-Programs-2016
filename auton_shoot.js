@@ -31,6 +31,6 @@ alicorn.shard("auton_shoot")
 
   .destroy(function(self) {
 
-    //peepo
+    efgt = 0;
 
   });

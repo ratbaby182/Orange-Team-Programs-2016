@@ -1,5 +1,5 @@
 var sdk;
-var gearfe = 0;
+var gtfh = 0;
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -10,7 +10,7 @@ function sleep(milliseconds) {
   }
 }
 
-alicorn.shard("auton_fates_twice")
+alicorn.shard("auton_fates_twice_red")
 
   .create(function(self) {
 
@@ -20,7 +20,7 @@ alicorn.shard("auton_fates_twice")
 
   .update(function(self) {
 
-    if(gearfe == 0 || gearfe == 1) {
+    if(gtfh == 0 || gtfh == 1) {
 
       //get the crank in position
       sdk.set("crank", 0.25);
@@ -32,7 +32,7 @@ alicorn.shard("auton_fates_twice")
       sdk.set("release", -1);
       sleep(500);
 
-      if(gearfe == 1) {
+      if(gtfh == 1) {
         //reload the crossbow
         sdk.set("reload", 0);
         sleep(1000);
@@ -44,7 +44,7 @@ alicorn.shard("auton_fates_twice")
       sdk.set("crank", 0);
       sleep(1500);
 
-      if(gearfe == 1) {
+      if(gtfh == 1) {
         //reload the crossbow
         sdk.set("reload", -1);
         sleep(1000);
@@ -58,7 +58,7 @@ alicorn.shard("auton_fates_twice")
 
       //what's up lets hit that ball
 
-      if(gearfe == 1) {
+      if(gtfh == 1) {
         //to the middle bit
     	  sdk.set("left", -.5);
     	  sdk.set("right", .5);
@@ -69,8 +69,8 @@ alicorn.shard("auton_fates_twice")
         sleep(1000);
 
   		  //roobt does a little turn to try to dislodge the ball
-  		  sdk.set("left", -.25);
-  		  sdk.set("right", -.25);
+  		  sdk.set("left", .25);
+  		  sdk.set("right", .25);
   		  sleep(1000);
 
   		  //robot stops and waits
@@ -78,8 +78,8 @@ alicorn.shard("auton_fates_twice")
     	  sdk.set("right", 0);
         sleep(1000);
 
-        sdk.set("left", .75);
-  		  sdk.set("right", .75);
+        sdk.set("left", -.50);
+  		  sdk.set("right", -.50);
   		  sleep(1000);
 
         sdk.set("left", 0);
@@ -94,19 +94,19 @@ alicorn.shard("auton_fates_twice")
         sdk.set("right", 0);
         sleep(100);
       }
-      gearfe += 1;
+      gtfh += 1;
     }
 
-    if(gearfe == 2) {
+    if(gtfh == 2) {
       sdk.set("left", 0);
       sdk.set("right", 0);
       sdk.set("release", 0);
 
-      gearfe = 3;
+      gtfh = 3;
     }
 
   })
 
   .destroy(function(self) {
-    gearfe = 0;
+    gtfh = 0;
   });
