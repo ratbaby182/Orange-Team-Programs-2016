@@ -19,8 +19,8 @@ alicorn.shard("Alpha")
 
 		//drive section
 
-		left_variable = joy1.get("y1") * 0.55;
-		right_variable = joy1.get("y2") * -0.55;
+		left_variable = joy1.get("y1") * 0.48;
+		right_variable = joy1.get("y2") * -0.45;
 
 		if (joy1.get("y1") > 0.1) {
 			sdk.set("left", left_variable);

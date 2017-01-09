@@ -47,7 +47,7 @@ alicorn.shard("auton_shoot_twice")
 
       //pull the elastic back
       sdk.set("crank", -0.25);
-      sleep(1250);
+      sleep(1750);
       sdk.set("crank", 0);
       sleep(1000);
 
