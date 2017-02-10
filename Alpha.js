@@ -56,11 +56,27 @@ alicorn.shard("Alpha")
 			sdk.set("release", -1);
 		}
 
-		//move the reload arm
+		//move the autonomous reload arm
 		if (joy1.get("left_bumper") == true) {
 			sdk.set("reload", 0);
 		} else if (joy1.get("right_bumper") == true) {
 			sdk.set("reload", -1);
+		}
+
+		//reload section
+
+		var you = joy1.get("left_trigger") + 1;
+		var hear = you / 2;
+
+		var about = joy1.get("right_trigger") + 1;
+		var videogames = about / -2;
+
+		if (hear > 0 && videogames == 0) {
+			sdk.set("Jokes", hear);
+		} else if (hear == 0 && videogames > 0) {
+			sdk.set("Jokes", videogames);
+		} else {
+			sdk.set("Jokes", 0);
 		}
 
 	})
