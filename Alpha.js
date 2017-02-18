@@ -1,4 +1,6 @@
-var sdk, joy1, joy2, left_variable, right_variable;
+var sdk, joy1, joy2;
+var left_variable, right_variable;
+var you, hear, about, videogames;
 
 alicorn.shard("Alpha")
 
@@ -65,15 +67,15 @@ alicorn.shard("Alpha")
 
 		//reload section
 
-		var you = joy1.get("left_trigger") + 1;
-		var hear = you / 2;
+		you = joy1.get("left_trigger") + 1;
+		hear = you / 4;
 
-		var about = joy1.get("right_trigger") + 1;
-		var videogames = about / -2;
+		about = joy1.get("right_trigger") + 1;
+		videogames = about / -4;
 
-		if (hear > 0 && videogames == 0) {
+		if (hear > 0.1 && videogames > -0.1) {
 			sdk.set("Jokes", hear);
-		} else if (hear == 0 && videogames > 0) {
+		} else if (hear < 0.1 && videogames < -0.1) {
 			sdk.set("Jokes", videogames);
 		} else {
 			sdk.set("Jokes", 0);
